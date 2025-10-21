@@ -153,6 +153,7 @@ ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0/2 70       </br>
    </br>
    
 In Multilayer Switch-2     </br>
+  </br>
 interface GigabitEthernet1/0/1         </br>
  no switchport        </br>
  ip address 172.16.3.153 255.255.255.252     </br>
@@ -208,7 +209,7 @@ ip nat inside source list 1 interface Serial0/0/1 overload   </br>
 ip route 0.0.0.0 0.0.0.0 Serial0/0/0      </br>
 ip route 0.0.0.0 0.0.0.0 Serial0/0/1 60    </br>
 </br>
-Edge router-1   </br>
+Edge router-2   </br>
 </br>
 interface GigabitEthernet0/0   </br>
  ip address 172.16.3.158 255.255.255.252    </br>
