@@ -399,7 +399,7 @@ The test below shows a successful ping from a PC to the destination IP 172.16.3.
 ## Result 
 The connectivity test shows 0% packet loss and minimal latency.    </br> 
 This confirms that inter-VLAN routing, OSPF configuration, and IP addressing are functioning correctly.    </br>
-All floors and departments can communicate securely through the configured network.    </br>
+All floors and departments can communicate securely through the configured network.     </br>
 
 
 
