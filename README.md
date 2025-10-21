@@ -42,6 +42,9 @@ Purpose:              </br>
 Sales focuses on client communication and database access.       </br>
 HR manages employee records and internal systems with secured access.         </br>
 </br>
+
+<img width="513" height="636" alt="Image" src="https://github.com/user-attachments/assets/09e55483-3250-4f0f-8f42-66cc674a8d97" />
+
 ## FLOOR-2    </br>
 </br>
 Floor 2 – Finance & Administration    </br>
@@ -60,6 +63,8 @@ Purpose:              </br>
 Finance handles secure transactions and data access.                      </br>
 Administration and PR manage organizational coordination and communication.        </br>
  </br>
+ <img width="575" height="631" alt="Image" src="https://github.com/user-attachments/assets/04d8ae44-4dad-418c-8e9f-4718e9b7d09d" />
+
  ## FLOOR-3   </br>
  </br>
 Floor 3 – ICT Department & Server Room
@@ -80,8 +85,8 @@ Purpose:
 IT department maintains the network, performs troubleshooting, and manages user access.     </br>
 Server Room ensures centralized resource sharing, data backup, and service reliability.     </br>
 
+<img width="461" height="583" alt="Image" src="https://github.com/user-attachments/assets/42dc0820-ffbc-4721-b37d-20769504d59b" />
 
- 
 ## Configuration   </br>
 ## Console & Privileged  Configuration
  </br>
