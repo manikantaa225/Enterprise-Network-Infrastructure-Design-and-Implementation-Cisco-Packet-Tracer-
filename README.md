@@ -122,7 +122,7 @@ Switch(config-if)# ip helper-address 172.16.3.130          </br>
 
 ## DHCP pool configuration
 
-
+<img width="1919" height="963" alt="Image" src="https://github.com/user-attachments/assets/6e771ef5-8dfa-405d-baa7-a42f2bc6ed1e" />
 
 
 
