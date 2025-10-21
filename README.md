@@ -359,7 +359,33 @@ router ospf 10         </br>
  network 195.136.17.12 0.0.0.3 area 0     </br>
  network 195.136.17.4 0.0.0.3 area 0     </br>
 
- 
+
+## SSH Configuration & Verificaton
+
+SSH (Secure Shell) is a secure remote management protocol used to access and control network devices such as routers and switches. Unlike Telnet, which transmits data (including passwords) in plain text, SSH encrypts all communication — providing confidentiality and integrity between the administrator and the device.   </br>
+To securely manage switches and routers from remote PCs.      </br>
+To prevent unauthorized access by using encrypted connections.    </br>
+To replace Telnet as the default remote access protocol for better security.   </br>
+To ensure only authenticated users (e.g., admin) can configure network devices.   </br>
+</br>
+
+Switch> enable     </br>
+Switch# configure terminal     </br>
+switch(config)# ip domain-name cisco.com    </br>
+switch(config)# username cisco password cisco@123   </br>
+switch(config)# crypto key generate rsa     </br>
+How many bits in the modulus [512]: 1024      </br>
+switch(config)# line vty 0 4     </br>
+switch(config-line)# transport input ssh   </br>
+switch(config-line)# login local        </br>
+switch(config-line)# exit              </br>
+switch(config)# ip ssh version 2      </br>
+
+# Verification
+
+
+
+
 
  
 
