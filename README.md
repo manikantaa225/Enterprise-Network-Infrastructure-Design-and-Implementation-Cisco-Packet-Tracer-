@@ -10,4 +10,4 @@ Overall, the project demonstrates a realistic enterprise-level infrastructure th
 
 ##  Network Topology   </br>
 
-<img width="925" height="562" alt="Image" src="https://github.com/user-attachments/assets/02426a8c-5e46-48f3-99ca-3999ef3ebcf1" />
+<img width="912" height="550" alt="Image" src="https://github.com/user-attachments/assets/0597a978-c6cb-4e55-874a-bf91675bb664" />
