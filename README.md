@@ -259,7 +259,7 @@ router ospf 10            </br>
  network 195.136.17.0 0.0.0.3 area 0      </br>
  network 195.136.17.8 0.0.0.3 area 0       </br>
 </br>
-ISP-2 configuration
+  ISP-2 configuration     </br>
 </br>
 interface Serial0/0/0        </br>
  ip address 195.136.17.14 255.255.255.252    </br>
