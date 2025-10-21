@@ -143,7 +143,7 @@ Switch(config-if-range)# switchport mode trunk     </br>
 Switch(config-if-range)# exit         </br>
 Switch(config)# interface range fa0/3 - 24    </br>
 Switch(config-if-range)# switchport mode access      </br>
-Switch(config-if-range)# switchport access vlan     </br>
+Switch(config-if-range)# switchport access vlan  40   </br>
 </br>
 Switch(config)# vlan 50          </br>
 Switch(config-vlan)# name ICT        </br>
@@ -152,7 +152,7 @@ Switch(config-if-range)# switchport mode trunk     </br>
 Switch(config-if-range)# exit         </br>
 Switch(config)# interface range fa0/3 - 24    </br>
 Switch(config-if-range)# switchport mode access      </br>
-Switch(config-if-range)# switchport access vlan     </br>
+Switch(config-if-range)# switchport access vlan  50 </br>
 </br>
 Switch(config)# vlan 60          </br>
 Switch(config-vlan)# name Server       </br>
@@ -161,7 +161,7 @@ Switch(config-if-range)# switchport mode trunk     </br>
 Switch(config-if-range)# exit         </br>
 Switch(config)# interface range fa0/3 - 24    </br>
 Switch(config-if-range)# switchport mode access      </br>
-Switch(config-if-range)# switchport access vlan     </br>
+Switch(config-if-range)# switchport access vlan   60   </br>
 </br>
 
 IN L3 Switches      </br>
