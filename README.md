@@ -101,6 +101,7 @@ Switch(config-if-range)# switchport access vlan     </br>
 
 IN L3 Switches      </br>
   </br>
+ 
 Switch(config)# interface vlan 10     </br>
 Switch(config-if)# ip address 172.16.1.1 255.255.255.128      </br>
 Switch(config-if)# ip helper-address 172.16.3.130        </br>
@@ -119,10 +120,164 @@ Switch(config-if)# ip helper-address 172.16.3.130           </br>
 Switch(config)# interface vlan 60       </br>
 Switch(config-if)# ip address 172.16.3.129 255.255.255.240     </br>
 Switch(config-if)# ip helper-address 172.16.3.130          </br>
+Switch(config-if)#exit   </br>
+Switch(config)#ip-routing   </br> 
 
-## DHCP pool configuration
+## DHCP pool configuration   </br>
 
 <img width="1919" height="963" alt="Image" src="https://github.com/user-attachments/assets/6e771ef5-8dfa-405d-baa7-a42f2bc6ed1e" />
+
+## OSPF configuration  </br>
+
+In Multilayer Switch-1     </br>
+
+Switch(config)# interface GigabitEthernet1/0/1      </br>
+ Switch(config-if)#no switchport         </br>  
+ Switch(config-if)#ip address 172.16.3.145 255.255.255.252        </br>
+Switch(config)#interface GigabitEthernet1/0/2       </br>
+ Switch(config-if)#no switchport        </br>
+ Switch(config-if)#ip address 172.16.3.149 255.255.255.252      </br>
+router ospf 10            </br>
+ router-id 1.1.1.1          </br>
+ network 172.16.1.0 0.0.0.127 area 0        </br>     
+ network 172.16.1.128 0.0.0.127 area 0       </br>
+ network 172.16.2.0 0.0.0.127 area 0          </br>
+ network 172.16.2.128 0.0.0.127 area 0         </br>
+ network 172.16.3.0 0.0.0.127 area 0         </br>
+ network 172.16.3.128 0.0.0.15 area 0          </br>
+ network 172.16.3.144 0.0.0.3 area 0      </br>  
+ network 172.16.3.148 0.0.0.3 area 0          </br>
+   </br>
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0/1      </br>
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0/2 70       </br>
+   </br>
+   
+In Multilayer Switch-2     </br>
+interface GigabitEthernet1/0/1         </br>
+ no switchport        </br>
+ ip address 172.16.3.153 255.255.255.252     </br>
+interface GigabitEthernet1/0/2      </br>
+ no switchport       </br>
+ ip address 172.16.3.157 255.255.255.252      </br>
+ router ospf 10            </br>
+ router-id 2.2.2.2          </br>
+ network 172.16.1.0 0.0.0.127 area 0        </br>     
+ network 172.16.1.128 0.0.0.127 area 0       </br>
+ network 172.16.2.0 0.0.0.127 area 0          </br>
+ network 172.16.2.128 0.0.0.127 area 0         </br>
+ network 172.16.3.0 0.0.0.127 area 0         </br>
+ network 172.16.3.128 0.0.0.15 area 0          </br>
+ network 172.16.3.144 0.0.0.3 area 0      </br>  
+ network 172.16.3.148 0.0.0.3 area 0          </br>
+   </br>
+
+## Edge router's & Ospf Configuration     </br>
+</br>
+Edge router-1   </br>
+</br>
+interface GigabitEthernet0/0    </br>
+ ip address 172.16.3.146 255.255.255.252    </br>
+ ip nat inside        </br>
+interface GigabitEthernet0/1      </br>
+ ip address 172.16.3.154 255.255.255.252     </br>
+ ip nat inside      </br>
+
+interface Serial0/0/0     </br>
+ ip address 195.136.17.1 255.255.255.252      </br>
+ ip nat outside     </br>
+ clock rate 64000       </br>
+interface Serial0/0/1     </br>
+ ip address 195.136.17.5 255.255.255.252     </br>
+ clock rate 64000    </br>
+ </br>
+router ospf 10   </br>
+ router-id 3.3.3.3      </br>
+ log-adjacency-changes      </br>
+ network 172.16.3.144 0.0.0.3 area 0    </br>
+ network 172.16.3.152 0.0.0.3 area 0     </br>
+ network 195.136.17.0 0.0.0.3 area 0    </br>
+ network 195.136.17.4 0.0.0.3 area 0     </br>
+</br>
+access-list 1 permit 172.16.1.0 0.0.0.127       </br>
+access-list 1 permit 172.16.1.128 0.0.0.127      </br>
+access-list 1 permit 172.16.2.0 0.0.0.127        </br>
+access-list 1 permit 172.16.2.128 0.0.0.127     </br>
+access-list 1 permit 172.16.3.0 0.0.0.127        </br>
+access-list 1 permit 172.16.3.128 0.0.0.15       </br>
+ip nat inside source list 1 interface Serial0/0/1 overload   </br>
+ip route 0.0.0.0 0.0.0.0 Serial0/0/0      </br>
+ip route 0.0.0.0 0.0.0.0 Serial0/0/1 60    </br>
+</br>
+Edge router-1   </br>
+</br>
+interface GigabitEthernet0/0   </br>
+ ip address 172.16.3.158 255.255.255.252    </br>
+ ip nat inside             </br>
+
+interface GigabitEthernet0/1          </br>
+ ip address 172.16.3.150 255.255.255.252     </br>
+ ip nat inside    </br>
+ 
+interface Serial0/0/0    </br>
+ ip address 195.136.17.13 255.255.255.252        </br>
+ ip nat outside          </br>
+ clock rate 64000          </br>
+interface Serial0/0/1     </br>
+ ip address 195.136.17.9 255.255.255.252      </br>
+ ip nat outside          </br>
+ clock rate 64000             </br>
+
+ router ospf 10          </br>
+ router-id 4.4.4.4            </br>
+ network 172.16.3.156 0.0.0.3 area 0          </br>
+ network 172.16.3.148 0.0.0.3 area 0            </br> 
+ network 195.136.17.12 0.0.0.3 area 0            </br>
+ network 195.136.17.8 0.0.0.3 area 0                </br>
+access-list 1 permit 172.16.1.0 0.0.0.127     </br>
+access-list 1 permit 172.16.1.128 0.0.0.127       </br>
+access-list 1 permit 172.16.2.0 0.0.0.127    </br>
+access-list 1 permit 172.16.2.128 0.0.0.127   </br>
+access-list 1 permit 172.16.3.0 0.0.0.127       </br>
+access-list 1 permit 172.16.3.128 0.0.0.15   </br>
+
+ip route 0.0.0.0 0.0.0.0 Serial0/0/1            </br>
+ip route 0.0.0.0 0.0.0.0 Serial0/0/0 60         </br>
+ip nat inside source list 1 interface Serial0/0/1 overload    </br>
+
+## ISP Configuration     </br>
+</br>
+ISP-1 configuration </br>
+</br>
+interface Serial0/0/0               </br>
+ ip address 195.136.17.2 255.255.255.252              </br>
+ no shut                   </br>
+interface Serial0/0/1           </br>
+ ip address 195.136.17.10 255.255.255.252       </br>
+ no shut                </br>
+router ospf 10            </br>
+ router-id 5.5.5.5              </br>
+ network 195.136.17.0 0.0.0.3 area 0      </br>
+ network 195.136.17.8 0.0.0.3 area 0       </br>
+</br>
+ISP-2 configuration
+</br>
+interface Serial0/0/0        </br>
+ ip address 195.136.17.14 255.255.255.252    </br>
+ no shut         </br>
+interface Serial0/0/1      </br>
+ ip address 195.136.17.6 255.255.255.252     </br>
+ no shut        </br>
+router ospf 10         </br>
+ router-id 6.6.6.6      </br
+ network 195.136.17.12 0.0.0.3 area 0     </br>
+ network 195.136.17.4 0.0.0.3 area 0     </br>
+
+ 
+
+ 
+
+
+
 
 
 
