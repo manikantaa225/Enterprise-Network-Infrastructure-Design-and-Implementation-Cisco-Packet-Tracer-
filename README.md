@@ -216,6 +216,9 @@ router ospf 10            </br>
 ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0/1      </br>
 ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0/2 70       </br>
    </br>
+# Verification  </br>
+<img width="1027" height="894" alt="Image" src="https://github.com/user-attachments/assets/9fdb9730-5663-4a83-ba0b-174c15b05fc9" />
+</br>
    
 In Multilayer Switch-2     </br>
   </br>
@@ -236,6 +239,9 @@ interface GigabitEthernet1/0/2      </br>
  network 172.16.3.144 0.0.0.3 area 0      </br>  
  network 172.16.3.148 0.0.0.3 area 0          </br>
    </br>
+ # Verification   </br>
+ <img width="1039" height="900" alt="Image" src="https://github.com/user-attachments/assets/d809e2f3-7c97-4d84-af3c-a29611e7bc34" />
+</br>
 
 ## Edge router's & Ospf Configuration     </br>
 </br>
