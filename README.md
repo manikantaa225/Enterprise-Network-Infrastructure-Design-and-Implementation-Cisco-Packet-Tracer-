@@ -383,7 +383,7 @@ switch(config)# ip ssh version 2      </br>
 
 # Verification
 
-<img width="1000" height="343" alt="Image" src="https://github.com/user-attachments/assets/d5b4b537-d3c5-4322-a062-3c1c2e352ced" />
+<img width="1000" height="343" alt="Image" src="https://github.com/user-attachments/assets/8b09d95b-b183-4125-b5a7-02762ea0dda0" />
 
 ## End-to-End Connectivity    
 
@@ -392,6 +392,9 @@ To ensure full network functionality, end-to-end connectivity was tested between
 
 ## Verification Output
 The test below shows a successful ping from a PC to the destination IP 172.16.3.145:     </br>
+
+<img width="977" height="317" alt="Image" src="https://github.com/user-attachments/assets/7714e9cd-e058-40e0-a6ea-d68e89effc43" />
+
 
 ## Result 
 The connectivity test shows 0% packet loss and minimal latency.    </br> 
