@@ -219,7 +219,9 @@ ip route 0.0.0.0 0.0.0.0 GigabitEthernet1/0/2 70       </br>
 # Verification  </br>
 <img width="1027" height="894" alt="Image" src="https://github.com/user-attachments/assets/9fdb9730-5663-4a83-ba0b-174c15b05fc9" />
 </br>
-   
+
+
+ </br>  
 In Multilayer Switch-2     </br>
   </br>
 interface GigabitEthernet1/0/1         </br>
@@ -280,6 +282,8 @@ ip nat inside source list 1 interface Serial0/0/1 overload   </br>
 ip route 0.0.0.0 0.0.0.0 Serial0/0/0      </br>
 ip route 0.0.0.0 0.0.0.0 Serial0/0/1 60    </br>
 </br>
+# Verification
+
 Edge router-2   </br>
 </br>
 interface GigabitEthernet0/0   </br>
