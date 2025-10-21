@@ -284,6 +284,11 @@ ip route 0.0.0.0 0.0.0.0 Serial0/0/1 60    </br>
 </br>
 # Verification
 
+<img width="1048" height="910" alt="Image" src="https://github.com/user-attachments/assets/d582a84f-93fe-4591-a258-6228cff2f8c3" />
+<img width="1054" height="317" alt="Image" src="https://github.com/user-attachments/assets/e49183c9-12fe-4910-a8c0-5bda561556b0" />
+</br>
+
+</br>
 Edge router-2   </br>
 </br>
 interface GigabitEthernet0/0   </br>
