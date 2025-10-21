@@ -325,6 +325,12 @@ ip route 0.0.0.0 0.0.0.0 Serial0/0/1            </br>
 ip route 0.0.0.0 0.0.0.0 Serial0/0/0 60         </br>
 ip nat inside source list 1 interface Serial0/0/1 overload    </br>
 
+# Verification    </br>
+
+<img width="1028" height="996" alt="Image" src="https://github.com/user-attachments/assets/9db13712-d2a4-423f-8fb8-a250bfd8f8f0" />
+<img width="1040" height="350" alt="Image" src="https://github.com/user-attachments/assets/f35d0ee7-208c-469b-9c7a-c5707ed30454" />
+</br>
+
 ## ISP Configuration     </br>
 </br>
 ISP-1 configuration </br>
