@@ -94,7 +94,7 @@ Server Room ensures centralized resource sharing, data backup, and service reli
   </br>
 Switch> enable      </br>
 Switch# configure terminal       </br>
-Switch(config)# enable secret cisco123     </br>
+Switch(config)# enable secret cisco@123     </br>
 Switch(config)# line console 0        </br>
 Switch(config-line)# password cisco@123      </br>
 Switch(config-line)# login      </br>
