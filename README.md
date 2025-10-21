@@ -383,6 +383,20 @@ switch(config)# ip ssh version 2      </br>
 
 # Verification
 
+<img width="1000" height="343" alt="Image" src="https://github.com/user-attachments/assets/d5b4b537-d3c5-4322-a062-3c1c2e352ced" />
+
+## End-to-End Connectivity    
+
+End-to-End Connectivity Verification    </br>   
+To ensure full network functionality, end-to-end connectivity was tested between different network segments across floors. Using the ping command, devices from one  </br>    department successfully reached devices in another subnet through Layer 3 switches and OSPF routing.     </br>
+
+## Verification Output
+The test below shows a successful ping from a PC to the destination IP 172.16.3.145:     </br>
+
+## Result 
+The connectivity test shows 0% packet loss and minimal latency.    </br> 
+This confirms that inter-VLAN routing, OSPF configuration, and IP addressing are functioning correctly.    </br>
+All floors and departments can communicate securely through the configured network.    </br>
 
 
 
